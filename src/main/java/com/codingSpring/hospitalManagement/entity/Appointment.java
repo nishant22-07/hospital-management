@@ -26,6 +26,6 @@ public class Appointment {
     private String reason;
 
     @ManyToOne
-    @JoinColumn(name = "patient_id")
+    @JoinColumn(name = "patient_id",nullable = false)
     private Patient patient;
 }
