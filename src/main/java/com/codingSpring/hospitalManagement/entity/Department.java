@@ -31,7 +31,7 @@ public class Department {
             joinColumns = @JoinColumn(name = "dpt_id"),
             inverseJoinColumns = @JoinColumn(name = "doctor_id")
     )
-    private Set<Doctor> doctorsList = new HashSet<>();
+    private Set<Doctor> doctors = new HashSet<>();
 }
 
 
