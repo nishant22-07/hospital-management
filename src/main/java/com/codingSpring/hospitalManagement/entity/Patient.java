@@ -53,13 +53,14 @@ public class Patient {
     private BloodGroupType bloodGroup;
 
 
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.MERGE,CascadeType.PERSIST})
     @JoinColumn(name="patient_insurance_id") //owning side
     private Insurance insurance;
 
 
-    @OneToMany(mappedBy ="patient")
-    private List<Appointment> appointmentList;
+    @OneToMany(mappedBy ="patient",cascade = {CascadeType.REMOVE} , orphanRemoval = true)
+    @ToString.Exclude
+    private List<Appointment> appointments;
 
 
 }
