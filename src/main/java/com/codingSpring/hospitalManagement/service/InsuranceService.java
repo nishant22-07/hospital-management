@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 public class InsuranceService {
 
-    private InsuranceRepository insuranceRepository;
-    private PatientRepository patientRepository;
+    private  final InsuranceRepository insuranceRepository;
+    private  final PatientRepository patientRepository;
 
 
     @Transactional
